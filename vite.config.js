@@ -4,21 +4,24 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 export default defineConfig({
-  root: 'src/',
-  base: 'aroken_coca/',
+  root: './src/',
+  base: '/coca_site/',
   server: {
     port: 3000,
     open: true,
   },
-  publicDir:'src/assets',
+  publicDir:'./src/assets',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: 'src/index.html',
-        pricing: 'src/pricing.html',
-        contacts: 'src/contacts.html',
+        main: './src/index.html',
+        pricing: './src/pricing.html',
+        contacts: './src/contacts.html',
+        about: './src/about.html',
+        blog: './src/blog.html',
+        article_1: './src/article-1.html',
       }
     }
   },
