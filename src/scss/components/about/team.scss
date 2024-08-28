@@ -1,0 +1,68 @@
+.team {
+  margin: 165px 0 0;
+
+  &__title {
+    max-width: 725px;
+  }
+
+  &__descr {
+    margin-top: 24px;
+    max-width: 534px;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-120);
+  }
+
+  &__slider {
+    position: relative;
+    margin-top: 80px;
+
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 126px;
+      left: 33%;
+      z-index: var(--z-index-2);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include mini-desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__contacts {
+    @include flex-justify-between;
+    margin-top: 16px;
+  }
+
+  &__card {
+    max-width: 379px
+  }
+
+  &__info {
+    @include flex-column;
+    gap: 8px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  &__level {
+    color: var(--neutral-color-120);
+  }
+
+  &__socials {
+    @include flex-justify-between;
+    width: 100%;
+    max-width: 112px;
+  }
+}

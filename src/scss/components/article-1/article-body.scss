@@ -1,0 +1,119 @@
+.article {
+  &__head {
+    &-wrapper {
+      @include flex-justify-between;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 940px;
+
+			@include mobile{
+				@include flex-column;
+				gap: 16px;
+			}
+    }
+
+    &-author {
+      display: flex;
+      gap: 24px;
+
+      & img {
+        border-radius: 50%;
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+      line-height: 150%;
+    }
+
+    &-position {
+      font-weight: 500;
+      line-height: 162%;
+      color: var(--neutral-color-150);
+    }
+
+    &-image {
+      margin: 24px auto 80px;
+      width: 100%;
+      height: 100%;
+      max-width: 940px;
+      max-height: 545px;
+
+			@include mobile{
+				margin: 24px auto;
+			}
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+    padding-bottom: 56px;
+    width: 100%;
+    max-width: 940px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 178%;
+    color: var(--neutral-color-100);
+
+		@include mobile{
+			padding-bottom: 32px;
+		}
+
+    &-title {
+      margin: 0 auto 24px;
+      width: 100%;
+      max-width: 940px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 48px;
+    margin: 0 auto 160px;
+    max-width: 940px;
+
+		@include mobile{
+			@include flex-column-all-center;
+			margin-bottom: 80px;
+		}
+
+    &-social {
+      @include flex-align-center;
+      gap: 32px;
+      margin-bottom: 14px;
+
+			@include small-mobile {
+				@include flex-all-center
+			}
+    }
+
+    &-svg path {
+      fill: var(--neutral-color-100);
+    }
+
+    &-share {
+      font-weight: 500;
+      line-height: 162%;
+
+			@include small-mobile {
+				display: none;
+			}
+    }
+
+    &-author {
+      margin: 16px 0;
+      font-weight: 600;
+    }
+
+    &-position {
+      margin-bottom: 16px;
+    }
+
+    &-skills {
+			max-width: 650px;
+      font-size: 18px;
+      line-height: 178%;
+      color: var(--neutral-color-100);
+    }
+  }
+}

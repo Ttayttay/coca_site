@@ -1,0 +1,109 @@
+.articles {
+  padding: 69px 0 160px;
+
+  @include mobile {
+    padding: 39px 0 70px;
+  }
+
+  &__head {
+    @include flex-all-between;
+    margin-bottom: 48px;
+
+    @include tablet {
+      gap: 24px;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @include mobile {
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    max-width: 530px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      max-width: 650px;
+    }
+  }
+
+  &__descr {
+    margin-top: 24px;
+    max-width: 376px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+
+    @include tablet {
+      max-width: 450px;
+    }
+  }
+	
+  &__page {
+		max-width: 407px;
+		
+    &-title {
+      margin-bottom: 40px;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+  }
+
+  &__btns {
+    @include flex-align-center;
+    gap: 16px;
+    justify-content: flex-end;
+
+    @include mini-desktop {
+      transform: translateY(5px);
+    }
+  }
+
+	&__link{
+		margin: 24px 0;
+		border: 1px solid var(--neutral-color-40);
+		padding: 16px 32px;
+    color: #1d1e25;
+    background-color: #fff;
+	}
+
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition:
+      background-color var(--transition),
+      border-color var(--transition);
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    & svg path {
+      transition: fill var(--transition);
+    }
+
+    &:hover {
+      border-color: var(--neutral-color-100);
+      background-color: var(--neutral-color-100);
+
+      & svg path {
+        fill: var(--neutral-color-10);
+      }
+    }
+
+    &--next {
+      transform: rotate(-180deg);
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.belive {
+  margin-bottom: 165px;
+  
+  &__slider {
+    position: relative;
+
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 126px;
+      left: 43.3%;
+      z-index: var(--z-index-2);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include mini-desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__inner {
+    @include flex-justify-between;
+    gap: 32px;
+    width: 132%;
+
+    @include tablet {
+      width: 100%;
+    }
+
+		&::before {
+			top: -20px;
+		}
+  }
+
+  @include small-tablet {
+    @include flex-align-center;
+  }
+
+  &__article {
+    max-width: 496px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 16px;
+    max-width: 360px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+
+    @include mini-desktop {
+      max-width: 700px;
+    }
+  }
+
+  &__button {
+    padding: 16px 32px;
+    color: var(--neutral-color-10);
+    background-color: var(--neutral-color-140);
+  }
+
+  &__img:first-child {
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__img:last-child {
+    @include tablet {
+      display: none;
+    }
+  }
+}

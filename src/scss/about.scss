@@ -1,0 +1,18 @@
+@import './mixins/';
+@import './base/';
+@import './globals/';
+
+// Components
+@import './components/header';
+@import './globals/decors';
+
+// Home
+@import './components/about/hero';
+@import './components/about/belive';
+@import './globals/buttons';
+@import './components/about/acceleration';
+@import './components/about/team';
+@import './components/about/join';
+
+// Footer
+@import './components/footer';

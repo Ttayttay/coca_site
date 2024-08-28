@@ -1,0 +1,13 @@
+@import './mixins/';
+@import './base/';
+@import './globals/';
+
+// Components
+@import './components/header';
+
+// Pricing
+@import './components/pricing/hero';
+@import './components/pricing/faq';
+
+// Footer
+@import './components/footer';

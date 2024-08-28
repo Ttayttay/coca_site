@@ -1,0 +1,42 @@
+.join {
+  margin: 100px 0 160px;
+
+  @include tablet {
+    margin: 60px 0 100px;
+  }
+
+  @include mobile{
+    margin: 20px 0 40px;
+  }
+
+  &__wrapper {
+    @include flex-all-between;
+    gap: 50px;
+    padding: 80px 0;
+
+    @include tablet {
+      @include flex-column-all-center;
+    }
+  }
+
+  &__title {
+    flex-shrink: 0;
+    max-width: 626px;
+  }
+
+  &__text {
+    max-width: 626px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--neutral-color-120);
+  }
+
+  &__link {
+    display: block;
+    margin-top: 24px;
+    font-weight: bold;
+    color: var(--neutral-color-100);
+    cursor: pointer;
+  }
+}
